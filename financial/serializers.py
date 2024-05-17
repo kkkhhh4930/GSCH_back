@@ -15,33 +15,8 @@ class SavingOptionSerializer(serializers.ModelSerializer):
         fields = '__all__'
         read_only_fields = ('saving',)
 
-
-class DepositOptionSerializer2(serializers.ModelSerializer):
-    class DepositSerializer(serializers.ModelSerializer):
-        class Meta:
-            model = Deposit
-            fields = '__all__'
-    deposit = DepositSerializer()
-    class Meta:
-        model = DepositOption
-        fields = '__all__'
-
-
-class SavingOptionSerializer2(serializers.ModelSerializer):
-    class SavingSerializer(serializers.ModelSerializer):
-        class Meta:
-            model = Saving
-            fields = '__all__'
-    saving = SavingSerializer()
-    class Meta:
-        model = SavingOption
-        fields = '__all__'
-
-
-
 class DepositSerializer(serializers.ModelSerializer):
     depositoption_set = DepositOptionSerializer(many=True, read_only=True)
-    depositoption2_set = DepositOptionSerializer2(many=True, read_only=True)
 
     class Meta:
         model = Deposit

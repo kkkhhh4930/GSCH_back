@@ -7,7 +7,7 @@ from .serializers import ExchangeRateSerializer
 from rest_framework.response import Response
 
 # Create your views here.
-API_KEY = 'u8Hi3CLUJFYx6KA3bbzHlUVqdQum5PdR'
+API_KEY = 'u8Hi3CLUJFYx6KA3bbzHlUVqdQum5PdR'  # 실제 API 키로 교체하세요
 URL = f'https://www.koreaexim.go.kr/site/program/financial/exchangeJSON?authkey={API_KEY}&data=AP01'
 
 
@@ -16,7 +16,7 @@ URL = f'https://www.koreaexim.go.kr/site/program/financial/exchangeJSON?authkey=
 def exchange(request):
     # OpenAPI로부터 데이터 가져오기
     response = requests.get(URL).json()
-    # print(response)  # API 응답 출력
+    print(response)  # API 응답 출력
 
     # 이전 데이터 가져오기
     previous_data = ExchangeRate.objects.all()

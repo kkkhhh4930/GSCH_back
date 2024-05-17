@@ -11,6 +11,3 @@ class Article(models.Model):
 
     def __str__(self):
         return self.title
-    
-# class CustomUser(AbstractUser):
-    # 추가 필드

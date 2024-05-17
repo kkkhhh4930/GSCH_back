@@ -3,6 +3,6 @@ from . import views
 
 
 urlpatterns = [
-    path('deposit_list/', views.deposit_list),
+    path('deposit_list/', views.save_deposit_products),
     # path('deposit_list/<str:deposit_code>/', views.deposit_detail),
 ]
