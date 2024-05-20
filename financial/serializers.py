@@ -8,7 +8,6 @@ class DepositOptionSerializer(serializers.ModelSerializer):
         fields = '__all__'
         read_only_fields = ('deposit',)
 
-
 class SavingOptionSerializer(serializers.ModelSerializer):
     class Meta:
         model = SavingOption
@@ -33,15 +32,15 @@ class SavingSerializer(serializers.ModelSerializer):
         read_only_fields = ('contract_user',)
 
 
-class ContractDepositSerializer(serializers.ModelSerializer):
-    depositoption_set = DepositOptionSerializer(many=True, read_only=True)
-    class Meta:
-        model = Deposit
-        fields = ('deposit_code','name', 'kor_co_nm', 'depositoption_set')
+# class ContractDepositSerializer(serializers.ModelSerializer):
+#     depositoption_set = DepositOptionSerializer(many=True, read_only=True)
+#     class Meta:
+#         model = Deposit
+#         fields = ('deposit_code','name', 'kor_co_nm', 'depositoption_set')
 
 
-class ContractSavingSerializer(serializers.ModelSerializer):
-    savingoption_set = SavingOptionSerializer(many=True, read_only=True)
-    class Meta:
-        model = Saving
-        fields = ('saving_code','name','kor_co_nm', 'savingoption_set')
+# class ContractSavingSerializer(serializers.ModelSerializer):
+#     savingoption_set = SavingOptionSerializer(many=True, read_only=True)
+#     class Meta:
+#         model = Saving
+#         fields = ('saving_code','name','kor_co_nm', 'savingoption_set')

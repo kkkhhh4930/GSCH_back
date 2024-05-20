@@ -3,26 +3,22 @@ from django.conf import settings
 
 
 class Deposit(models.Model):
-    fin_prdt_cd = models.CharField(max_length=100) # fin_prdt_cd 
-    fin_co_no = models.CharField(max_length=100)
-    kor_co_nm = models.CharField(max_length=100)
-    fin_prdt_nm = models.CharField(max_length=100) # fin_prdt_nm
-    dcls_month = models.CharField(max_length=20)
-    join_way = models.CharField(max_length=100)
-    mtrt_int = models.TextField(blank=True, null=True)
-    spcl_cnd = models.TextField(blank=True, null=True)
-    join_deny = models.IntegerField(blank=True, null=True)
-    join_member = models.TextField(blank=True, null=True)
-    etc_note = models.TextField(blank=True, null=True)
-    max_limit = models.IntegerField(blank=True, null=True)
-    contract_user = models.ManyToManyField(settings.AUTH_USER_MODEL, related_name='contract_deposit')
+    fin_prdt_cd = models.TextField(unique=True, null = True)    # 금융 상품 코드
+    kor_co_nm = models.TextField(null = True)                   # 금융회사명
+    fin_prdt_nm = models.TextField(null = True)                 # 금융 상품명
+    etc_note = models.TextField(null = True)                    # 금융 상품 설명
+    join_deny = models.IntegerField(null = True)                # 가입 제한
+    join_member = models.TextField(null = True)                 # 가입대상
+    join_way = models.TextField(null = True)                    # 가입 방법
+    spcl_cnd = models.TextField(null = True)                    # 우대조건
+
 
 
 class Saving(models.Model):
-    saving_code = models.CharField(max_length=100) # fin_prdt_cd 
+    fin_prdt_cd = models.CharField(max_length=100) 
     fin_co_no = models.CharField(max_length=100)
     kor_co_nm = models.CharField(max_length=100)
-    name = models.CharField(max_length=100) # fin_prdt_nm
+    fin_prdt_nm = models.CharField(max_length=100)
     dcls_month = models.CharField(max_length=20)
     join_way = models.CharField(max_length=100)
     mtrt_int = models.TextField(blank=True, null=True)

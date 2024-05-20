@@ -6,8 +6,9 @@ from .models import ExchangeRate
 from .serializers import ExchangeRateSerializer
 from rest_framework.response import Response
 
-# Create your views here.
-API_KEY = 'u8Hi3CLUJFYx6KA3bbzHlUVqdQum5PdR'  # 실제 API 키로 교체하세요
+
+# 한국수출입은행 환율정보 API
+API_KEY = 'u8Hi3CLUJFYx6KA3bbzHlUVqdQum5PdR'
 URL = f'https://www.koreaexim.go.kr/site/program/financial/exchangeJSON?authkey={API_KEY}&data=AP01'
 
 
