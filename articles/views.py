@@ -23,9 +23,12 @@ def article_list(request):
     elif request.method == 'POST':
         # 클라이언트로부터 전달된 데이터를 시리얼라이즈
         serializer = ArticleSerializer(data=request.data)
+        print(request.data )
+        print(request.user )
         # 데이터가 유효한 경우 저장
         if serializer.is_valid(raise_exception=True):
             # 로그인한 사용자를 Article의 작성자로 지정하여 저장
+            print('Pass')
             serializer.save(user=request.user)
             # 저장된 데이터를 JSON 형태로 반환
             return Response(serializer.data, status=status.HTTP_201_CREATED)
