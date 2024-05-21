@@ -17,7 +17,6 @@ URL = f'https://www.koreaexim.go.kr/site/program/financial/exchangeJSON?authkey=
 def exchange(request):
     # OpenAPI로부터 데이터 가져오기
     response = requests.get(URL).json()
-    print(response)  # API 응답 출력
 
     # 이전 데이터 가져오기
     previous_data = ExchangeRate.objects.all()
