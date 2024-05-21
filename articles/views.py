@@ -109,7 +109,7 @@ def comment_list(request, article_pk):
 
 # 특정 Comment 조회, 수정 및 삭제
 @api_view(['GET', 'PUT', 'DELETE'])
-@permission_classes([IsAuthenticated])
+# @permission_classes([IsAuthenticated])
 def comment_detail(request, article_pk, comment_pk):
     # 특정 pk를 가진 Comment를 조회
     comment = get_object_or_404(Comment, pk=comment_pk)
