@@ -134,7 +134,10 @@ AUTH_PASSWORD_VALIDATORS = [
     },
 ]
 
-
+REST_AUTH = {
+    'REGISTER_SERIALIZER': 'accounts.serializers.CustomRegisterSerializer',
+ }
+ACCOUNT_ADAPTER  = 'accounts.models.CustomAccountAdapter'
 # Internationalization
 # https://docs.djangoproject.com/en/4.2/topics/i18n/
 
