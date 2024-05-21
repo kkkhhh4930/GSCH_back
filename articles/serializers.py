@@ -3,13 +3,12 @@ from .models import Article
 
 
 class ArticleListSerializer(serializers.ModelSerializer):
-    username = serializers.CharField(source='user.username', read_only=True)
     class Meta:
         model = Article
-        fields = ('pk', 'title', 'content','username')
+        fields = ('id', 'title', 'content')
 
 class ArticleSerializer(serializers.ModelSerializer):
     class Meta:
         model = Article
-        fields = '__all__'
-        read_only_fields=('user',)
+        fields = 'all'
+        read_only_fields = ('user',)
