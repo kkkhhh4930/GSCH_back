@@ -21,9 +21,10 @@ class UserSerializer(serializers.ModelSerializer):
 
 # 게시글 목록 조회 시리얼라이저
 class ArticleListSerializer(serializers.ModelSerializer):
+    user = UserSerializer(read_only=True)  # 읽기 전용 사용자 시리얼라이저
     class Meta:
         model = Article
-        fields = ('id', 'title', 'content')
+        fields = ('id', 'title', 'user',)  # 게시글의 id, 제목 및 작성자(사용자) 포함
 
 
 # 게시글 상세 조회 및 수정 시리얼라이저
@@ -31,5 +32,13 @@ class ArticleSerializer(serializers.ModelSerializer):
     user = UserSerializer(read_only=True)  # 읽기 전용 사용자 시리얼라이저
     class Meta:
         model = Article
-        fields = 'all'
-        read_only_fields = ('user',)
+        fields = '__all__'  # 모든 게시글 필드를 포함
+
+
+# 댓글 시리얼라이저
+class CommentSerializer(serializers.ModelSerializer):
+    user = UserSerializer(read_only=True)  # 읽기 전용 사용자 시리얼라이저
+    class Meta:
+        model = Comment
+        fields = '__all__'  # 모든 댓글 필드를 포함
+        read_only_fields = ('article',)  # article 필드는 읽기 전용으로 설정

@@ -6,8 +6,6 @@ from rest_framework.response import Response
 from django.shortcuts import get_object_or_404
 
 API_KEY = '05123616ac0af1b386553f893c720f21'
-deposit_URL= f'http://finlife.fss.or.kr/finlifeapi/depositProductsSearch.json?auth={API_KEY}&topFinGrpNo=020000&pageNo=1'
-saving_URL= f'http://finlife.fss.or.kr/finlifeapi/savingProductsSearch.json?auth={API_KEY}&topFinGrpNo=020000&pageNo=1'
 
 
 @api_view(['POST'])
