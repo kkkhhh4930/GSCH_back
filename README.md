@@ -52,18 +52,14 @@
 
 ### Figma
 
-<img src="./README_IMG/Figma.png" alt='Figma'/>
+![Figma](https://github.com/kkkhhh4930/GSCH_back/assets/156387278/4d76b30c-9080-4adb-84ba-92ec107475ef)
 
 - 예금 & 적금 금리 비교, 근처 은행 검색, 환율계산기, 나에게 맞는 상품 추천, 커뮤니티(게시판) 등의 필수 기능 뿐만아니라 프로필 이미지 설정 및 변경, 환율 조회시 환율 변동 그래프 시각화 등 계획했던 기능 이상을 구현 성공했습니다. 
 
 ## 데이터베이스 모델링(ERD)
 [**ERD drawio Link**](https://www.erdcloud.com/d/RnTXrERnZcBoBsuMn)
 
-<img src="./README_IMG/ERD.png" alt='Figma'/>
-
-### API 명세서
-<img src='./README_IMG/API_명세서.png' alt='API 명세서' />
-
+![ERD](https://github.com/kkkhhh4930/GSCH_back/assets/156387278/1250ef45-fbd0-4590-89f9-68dbf6f7b110)
 
 ## 금융 상품 추천 알고리즘에 대한 기술적 설명
 ### 추천 알고리즘 1.
@@ -78,22 +74,22 @@ OPenAI API를 활용한 알고리즘입니다.
 ## 서비스 대표 기능들에 대한 설명
 
 ### 1. 메인 페이지
-<img src='./README_IMG/메인페이지.png' alt='메인페이지'/>
+![메인페이지](https://github.com/kkkhhh4930/GSCH_back/assets/156387278/c1f0381f-fb22-4505-8c0b-66bba24b266f)
 
 - carousel를 이용해 메인 페이지를 구성했습니다. 화면을 슬라이드 할 수 있고 클릭시 각 기능에 맞는 페이지로 이동할 수 있게 구현했습니다. 
 
 ### 2️. 회원 관리(로그인, 회원가입)페이지
-<img src='./README_IMG/로그인페이지.png' alt='로그인페이지'/>
-<img src='./README_IMG/회원가입페이지.png' alt='회원가입페이지'/>
+![로그인페이지](https://github.com/kkkhhh4930/GSCH_back/assets/156387278/17a2a93a-df3f-4a00-add7-d65336a0dbdb)
+![회원가입페이지](https://github.com/kkkhhh4930/GSCH_back/assets/156387278/a2657d06-b772-41a4-8e51-e601426f42b7)
 
 - 로그인 페이지에서는 회원이 아닐 경우, 회원 가입페이지로 넘어갈 수 있게 설정했습니다. 
 - 회원가입시 아이디는 가입된 유저와 중복되지 않도록 설정하였고 이메일은 이메일 형식으로, 비밀번호는 8~16자의 영어 대소문자, 숫자, 특수문자로 이루어져 있는지 확인하는 등의 유효성 검사를 진행하였습니다.
 - 회원가입시 프로필 이미지는 기본 이미지로 설정되며 마이 페이지에서 원하는 이미지로 변경 가능합니다. 
 
 ### 3. 예적금 금리 비교 페이지
-<img src='./README_IMG/정기예금페이지.png' alt='정기예금페이지'/>
-<img src='./README_IMG/정기적금페이지.png' alt='정기적금페이지'/>
-<img src='./README_IMG/예,적금상세페이지.png' alt='예,적금상세페이지'/>
+![정기예금페이지](https://github.com/kkkhhh4930/GSCH_back/assets/156387278/45333062-0224-4432-905a-2eb97bd19fa2)
+![정기적금페이지](https://github.com/kkkhhh4930/GSCH_back/assets/156387278/ac8fd48f-4b45-475a-ac46-2e8d38412a3e)
+![예적금상세페이지](https://github.com/kkkhhh4930/GSCH_back/assets/156387278/9734e5d2-9988-45a0-9a24-022f4123e969)
 
 - 예적금 금리 비교 페이지에는 정기 예금 페이지, 정기 적금 페이지의 두 개의 탭으로 나누어집니다.
 - 정기 예금 페이지에서는 모든 정기 예금에 대한 정보를 테이블에서 확인할 수 있고 은행, 예치 기간을 기준으로 검색 가능하며 개월 별 금리에 따라 필터링도 가능합니다.
@@ -101,34 +97,34 @@ OPenAI API를 활용한 알고리즘입니다.
 - 정기 적금 페이지 또한 예금페이지와 동일한 기능을 구현했습니다. 
 
 ### 4. 환율 계산기
-<img src='./README_IMG/환율계산페이지.png' alt='환율계산페이지'/>
+![환율계산페이지](https://github.com/kkkhhh4930/GSCH_back/assets/156387278/7ab02d1d-aa4b-4b95-8632-074e7ab25399)
 
 - 환율 계산기 페이지에서는 각각 선택한 국가의 통화로 변환된 값을 출력합니다. 스위치 버튼을 누르면 현재 선택 국가 기준 반대로 변환한 값을 출력합니다. 
 - 또한 하단에 출력되는 환율 변동 그래프를 통해 최근 환율 추이를 직관적으로 확인할 수 있습니다. 
 
 
 ### 5. 근처 은행 검색
-<img src='./README_IMG/주변은행검색페이지.png' alt='주변은행검색페이지'/>
+![주변은행페이지](https://github.com/kkkhhh4930/GSCH_back/assets/156387278/caeb1267-061a-4f62-a6dd-ccf5c8c458af)
 
 - 근처 은행 검색 페이지에서는 직접 광역시/도, 시/군/구, 은행 등을 선택하여 검색할 수 있습니다.
 - 검색된 위치 근처의 은행 정보가 나타나며 출력된 테이블에서 선택 시, 선택된 은행의 정보를 출력합니다. 
 
 ### 6️. 커뮤니티(게시판)
-<img src='./README_IMG/게시판목록페이지.png' alt='게시판목록페이지'/>
-<img src='./README_IMG/게시판글쓰기페이지.png' alt='게시판글쓰기페이지'/>
-<img src='./README_IMG/게시판상세페이지.png' alt='게시판상세페이지'/>
-<img src='./README_IMG/게시판댓글수정페이지.png' alt='게시판댓글수정페이지'/>
-<img src='./README_IMG/게시판수정페이지.png' alt='게시판수정페이지'/>
+![게시판목록페이지](https://github.com/kkkhhh4930/GSCH_back/assets/156387278/69f8a4a9-e812-476f-bfee-47af2a03f8b2)
+![게시판글쓰기페이지](https://github.com/kkkhhh4930/GSCH_back/assets/156387278/ef4a1f10-d817-43c7-b406-141072680a5c)
+![게시판상세페이지](https://github.com/kkkhhh4930/GSCH_back/assets/156387278/101fa226-b498-4c89-aaa8-68437474fe97)
+![게시판댓글수정페이지](https://github.com/kkkhhh4930/GSCH_back/assets/156387278/56a0decc-1b9f-4c00-8470-adbaf3d4a93a)
+![게시판수정페이지](https://github.com/kkkhhh4930/GSCH_back/assets/156387278/d2a9796e-a0c7-4f13-aaf3-7ac5a9dda23d)
 
 - 인증된 사용자들(로그인 된) 사용자들끼리 커뮤니티를 형성할 수 있도록 금융 상품 후기 게시판을 제공합니다. (비로그인 회원은 게시글 목록 조회만 가능합니다.)
 - 기본적인 게시물 CRUD와 댓글 CRUD를 제공합니다.
 - 게시글과 댓글엔 작성한 유저네임과 작성시간을 표시하며 댓글 목록엔 전체 댓글 수를 함께 출력합니다. 
 
 ### 7. 마이페이지
-<img src='./README_IMG/마이페이지.png' alt='마이페이지'/>
-<img src='./README_IMG/가입상품관리페이지.png' alt='가입상품관리페이지'/>
-<img src='./README_IMG/상품추천페이지1.png' alt='상품추천페이지1'/>
-<img src='./README_IMG/상품추천페이지2.png' alt='상품추천페이지2'/>
+![마이페이지](https://github.com/kkkhhh4930/GSCH_back/assets/156387278/a78314c8-8d4b-4dfd-bea9-8e9f7b6ce549)
+![가입상품관리페이지](https://github.com/kkkhhh4930/GSCH_back/assets/156387278/3d94cf21-53c4-4810-83ba-4e1aeef0978f)
+![상품추천페이지](https://github.com/kkkhhh4930/GSCH_back/assets/156387278/6ec1f3a1-35bb-4b45-9ac9-1883c8104b34)
+
 
 - 마이페이지에서 프로필이미지, 아이디, 이메일 등의 회원 정보를 확인할 수 있으며 프로필 이미지와 비밀번호를 변경할 수 있습니다.
 - 가입 상품 관리 탭에서는 기존에 가입했던 상품들의 리스트를 확인하고 상품들의 상세 정보를 확인하고 가입 해지를 할 수 있습니다. 또한, 가입한 상품들의 기본금리와 우대금리를 그래프로 시각화하여 이자율을 한 눈에 비교할 수 있습니다. 
